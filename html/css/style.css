@@ -57,9 +57,20 @@
     -webkit-text-size-adjust: 100%;
   }
   
+/*-- flex css starts here --*/
+.flex{display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-wrap: wrap; width: 100%; }
+.flex-vcenter{-webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+.flex-content-center{-ms-justify-content: center; -moz-justify-content: center; -webkit-justify-content: center; justify-content: center; }
+.flex-center{-webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; -ms-justify-content: center; -moz-justify-content: center; -webkit-justify-content: center; justify-content: center; }
+.flex-nowrap{flex-wrap: nowrap; }
+.flex-end{align-items: flex-end;}
+.flex-start{align-items: flex-start;}
+.row-reverse{flex-direction: row-reverse;}
+
   body {
     margin: 0;
   }
+
   
   article,
   aside,
@@ -326,6 +337,9 @@
   
   img {
     vertical-align: middle;
+    max-width: 100%; 
+    object-fit: contain;
+    height: auto;
   }
   
   .img-responsive {
@@ -395,6 +409,28 @@
     padding-right: 3px;
   }
   
+
+  
+  .awards-section{padding: 6rem 0 6rem;}
+.awards-section h2{max-width: 312px;}
+.awards-list{padding: 2rem; min-height: 220px; background-color: #fff; border-radius: 17px; text-align: center; transition: all 0.3s ease-in;display: flex;align-items: center;}
+.awards-list.hover{background-color: #ECECEC;}
+.awards-text h2{margin-bottom: 0.5rem; font-family: 'Geometria'; font-weight: 500; color: #217177; font-size: 24px; line-height: 32px; }
+.awards-image{max-width: 150px; margin-bottom: 1rem;}
+.awards-top{gap: 2rem; margin-bottom: 6rem;}
+.awards-head{flex: 1;}
+.awards-head p{ padding-top: 20px; font-family: 'Geometria'; font-size: 20px; line-height: 24px; font-weight: 400; color: #181818; text-align: justify;}
+.awards-reviews{max-width: 250px; padding: 2rem; background-color: #fff;box-shadow: 0px 0px 86px rgb(89 182 182 / 30%); border-radius: 14px; text-align: center;}
+.awards-reviews *{ font-family: 'Geometria'; font-weight: 400; color: #181818;}
+.awards-reviews figure{margin: 0;}
+.awards-review{gap: 0.5rem; margin-bottom: 1rem;}
+figure.nopath img{max-width: 40px;}
+span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; line-height: 30px; }
+.awards-review-span{gap: 0.5rem; margin-top: 1rem;}
+.awards-review-span svg path{fill: var(--light-blue);}
+.awards-text p{ font-family: 'Geometria'; font-size: 14px; line-height: 18px; font-weight: 400; color: #181818; }
+
+
   @media (min-width: 768px) {
     .container {
       width: 725px;
@@ -411,6 +447,9 @@
     .container {
       width: 1170px;
     }
+    .awards-row{gap: 32px;}
+    .awards-list{flex:  0 0 calc(33.333333333% - 22px);}
+  
   }
   
   .container-fluid {
@@ -2182,7 +2221,7 @@
     width: 1962px;
     height: 1563px;
     z-index: -1;
-    background: url(images/school_bg.svg) 50% 50% no-repeat;
+    background: url(../images/school_bg.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -2195,7 +2234,7 @@
     background: #fff;
     filter: blur(209.5px);
   }
-  
+
   @media only screen and (min-width: 320px) {
     .elipse_4_2 {
       display: none;
@@ -2578,7 +2617,7 @@
     left: -17px;
     top: 50%;
     transform: translateY(-50%);
-    background: url(images/arr_kroha.svg) 50% 50% no-repeat;
+    background: url(../images/arr_kroha.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -2671,7 +2710,7 @@
       width: 45px;
       height: 45px;
       position: absolute;
-      background: url(images/telegram_fx.svg) 100% 100% no-repeat;
+      background: url(../images/telegram_fx.svg) 100% 100% no-repeat;
       background-size: cover;
       transition: 0.3s ease-out;
     }
@@ -2691,7 +2730,7 @@
       width: 55px;
       height: 55px;
       position: absolute;
-      background: url(images/telegram_fx.svg) 100% 100% no-repeat;
+      background: url(../images/telegram_fx.svg) 100% 100% no-repeat;
       background-size: cover;
       transition: 0.3s ease-out;
     }
@@ -2798,7 +2837,11 @@
       height: 110px;
     }
   }
-  
+  .top_menu .top_menu_main .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   .top_menu .top_menu_main .logo svg {
     width: 100%;
     height: 100%;
@@ -2920,7 +2963,7 @@
   }
   
   .top_menu .top_menu_main .top_menu_center .adress .icon {
-    background: url(images/point_menu.svg) 50% 50% no-repeat;
+    background: url(../images/point_menu.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-right: 20px;
   }
@@ -2963,13 +3006,13 @@
   }
   
   .top_menu .top_menu_main .top_menu_center .pfones .pfone {
-    background: url(images/phone_menu.svg) 50% 50% no-repeat;
+    background: url(../images/phone_menu.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-right: 10px;
   }
   
   .top_menu .top_menu_main .top_menu_center .pfones .telegram {
-    background: url(images/telegram_menu.svg) 50% 50% no-repeat;
+    background: url(../images/telegram_menu.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-right: 20px;
   }
@@ -3051,7 +3094,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: url(images/arrow_v.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_v.svg) 50% 50% no-repeat;
     background-size: contain;
     transition: 0.3s ease-out;
     transform: rotate(0);
@@ -3231,7 +3274,7 @@
   }
   
   .soc .a_soc.soc_fb span {
-    background: url(images/soc_fb.svg) 50% 50% no-repeat;
+    background: url(../images/soc_fb.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3243,7 +3286,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/soc_fb.svg) 50% 50% no-repeat;
+    background: url(../images/soc_fb.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -3265,7 +3308,7 @@
   }
   
   .soc .a_soc.soc_vb span {
-    background: url(images/soc_vb.svg) 50% 50% no-repeat;
+    background: url(../images/soc_vb.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3277,7 +3320,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/soc_vb.svg) 50% 50% no-repeat;
+    background: url(../images/soc_vb.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -3299,7 +3342,7 @@
   }
   
   .soc .a_soc.soc_tw span {
-    background: url(images/soc_tw.svg) 50% 50% no-repeat;
+    background: url(../images/soc_tw.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3311,7 +3354,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/soc_tw.svg) 50% 50% no-repeat;
+    background: url(../images/soc_tw.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -3333,7 +3376,7 @@
   }
   
   .soc .a_soc.soc_te span {
-    background: url(images/soc_te.svg) 50% 50% no-repeat;
+    background: url(../images/soc_te.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3345,7 +3388,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/soc_te.svg) 50% 50% no-repeat;
+    background: url(../images/soc_te.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -3367,7 +3410,7 @@
   }
   
   .soc .a_soc.soc_ma span {
-    background: url(images/soc_ma.svg) 50% 50% no-repeat;
+    background: url(../images/soc_ma.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3379,7 +3422,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/soc_ma.svg) 50% 50% no-repeat;
+    background: url(../images/soc_ma.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -3589,7 +3632,7 @@
   .news_sl_block .news_sl_block_text .arr_min div {
     width: 8px;
     height: 12px;
-    background: url(images/ss.svg) 50% 50% no-repeat;
+    background: url(../images/ss.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -3910,7 +3953,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
-    background: url(images/arr_reg.svg) 50% 50% no-repeat;
+    background: url(../images/arr_reg.svg) 50% 50% no-repeat;
     background-size: contain;
     transition: 0.3s linear;
   }
@@ -4381,7 +4424,7 @@
   .top_sl .topic_sl .arr div {
     width: 8px;
     height: 12px;
-    background: url(images/ss.svg) 50% 50% no-repeat;
+    background: url(../images/ss.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -4545,7 +4588,7 @@
     position: absolute;
     width: 45px;
     height: 25px;
-    background: url(images/arrow_img_h.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img_h.svg) 50% 50% no-repeat;
     background-size: contain;
     z-index: 2;
     transition: 0.4s ease-in-out;
@@ -4557,7 +4600,7 @@
   }
   
   .top_sl .topic_sl .topic_sl_track .gorizontal-slider-item .topic_sl_block .topic_sl_block_img .courses_arrow_block .courses_arrow.arrow_2 {
-    background: url(images/arrow_img.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img.svg) 50% 50% no-repeat;
     background-size: contain;
     left: 0;
     bottom: 0;
@@ -4729,7 +4772,7 @@
     display: block;
     width: 10px;
     height: 18px;
-    background: url(images/btn_arr_orange.svg) 50% 50% no-repeat;
+    background: url(../images/btn_arr_orange.svg) 50% 50% no-repeat;
     background-size: contain;
     position: absolute;
     top: 2px;
@@ -4776,7 +4819,7 @@
   }
   
   .btn.black div span {
-    background: url(images/btn_arr_white.svg) 50% 50% no-repeat;
+    background: url(../images/btn_arr_white.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -4794,7 +4837,7 @@
   }
   
   .btn.orange_tr div span {
-    background: url(images/btn_arr_orange_th.svg) 50% 50% no-repeat;
+    background: url(../images/btn_arr_orange_th.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -4872,7 +4915,7 @@
     width: 22px;
     height: 28px;
     overflow: hidden;
-    background: url(images/pdf.svg) 50% 100% no-repeat;
+    background: url(../images/pdf.svg) 50% 100% no-repeat;
     background-size: cover;
   }
   
@@ -4882,7 +4925,7 @@
   
   .btn.bord_orange:hover div span {
     right: 0;
-    background: url(images/pdf.svg) 50% 0 no-repeat;
+    background: url(../images/pdf.svg) 50% 0 no-repeat;
     background-size: cover;
   }
   
@@ -4905,7 +4948,7 @@
   
   .btn.bord_orange_solo:hover div span {
     right: 0;
-    background: url(images/pdf.svg) 50% 0 no-repeat;
+    background: url(../images/pdf.svg) 50% 0 no-repeat;
     background-size: cover;
   }
   
@@ -4989,7 +5032,7 @@
   .a_ic.fb span {
     width: 24px;
     height: 24px;
-    background: url(images/ic_facebook.html) 50% 50% no-repeat;
+    background: url(../images/ic_facebook.html) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(0, 0, 0, 0deg);
   }
@@ -5003,7 +5046,7 @@
   .a_ic.ins span {
     width: 24px;
     height: 24px;
-    background: url(images/ic_instagram.html) 50% 50% no-repeat;
+    background: url(../images/ic_instagram.html) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(0, 0, 0, 0deg);
   }
@@ -5017,7 +5060,7 @@
   .a_ic.you span {
     width: 24px;
     height: 24px;
-    background: url(images/ic_youtube.html) 50% 50% no-repeat;
+    background: url(../images/ic_youtube.html) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(0, 0, 0, 0deg);
   }
@@ -5302,8 +5345,9 @@
   .menu_sec .menu_img {
     width: 120px;
     height: 120px;
-    background: url(images/lofo_f.svg) 50% 50% no-repeat;
+    background: url(../images/ScoopLabs.jpg) 50% 50% no-repeat;
     background-size: contain;
+    mix-blend-mode: lighten;
   }
   
   @media only screen and (min-width: 320px) {
@@ -5583,7 +5627,7 @@
     height: 34px;
     position: absolute;
     right: -34px;
-    background: url(images/menu_arr.svg) 50% 50% no-repeat;
+    background: url(../images/menu_arr.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate(0deg);
     transition: 0.3s ease-out;
@@ -5818,7 +5862,7 @@
   }
   
   .flex_ic a.instagram {
-    background: url(images/instagram.svg) 50% 50% no-repeat;
+    background: url(../images/instagram.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-bottom: 0;
     transition: 0.3s ease-out;
@@ -5832,7 +5876,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/instagram.svg) 50% 50% no-repeat;
+    background: url(../images/instagram.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -5854,7 +5898,7 @@
   }
   
   .flex_ic a.youtube {
-    background: url(images/youtube.svg) 50% 50% no-repeat;
+    background: url(../images/youtube.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-bottom: 0;
     transition: 0.3s ease-out;
@@ -5868,7 +5912,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/youtube.svg) 50% 50% no-repeat;
+    background: url(../images/youtube.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -5890,7 +5934,7 @@
   }
   
   .flex_ic a.facebook {
-    background: url(images/facebook.svg) 50% 50% no-repeat;
+    background: url(../images/facebook.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-bottom: 0;
     transition: 0.3s ease-out;
@@ -5904,7 +5948,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/facebook.svg) 50% 50% no-repeat;
+    background: url(../images/facebook.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -5926,7 +5970,7 @@
   }
   
   .flex_ic a.telegram {
-    background: url(images/telegram.svg) 50% 50% no-repeat;
+    background: url(../images/telegram.svg) 50% 50% no-repeat;
     background-size: contain;
     margin-bottom: 0;
     transition: 0.3s ease-out;
@@ -5940,7 +5984,7 @@
     position: absolute;
     bottom: -20px;
     left: 0;
-    background: url(images/telegram.svg) 50% 50% no-repeat;
+    background: url(../images/telegram.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate3d(1, 0, 0, 100deg);
     filter: blur(3px);
@@ -6473,7 +6517,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(images/popup_polo_y.svg) 50% 50% no-repeat;
+    background: url(../images/popup_polo_y.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -6659,7 +6703,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
-    background: url(images/arr_reg.svg) 50% 50% no-repeat;
+    background: url(../images/arr_reg.svg) 50% 50% no-repeat;
     background-size: contain;
     transition: 0.3s linear;
   }
@@ -7520,7 +7564,7 @@
   .header__main__item .header_tab_cont .arr_min div {
     width: 8px;
     height: 12px;
-    background: url(images/ss.svg) 50% 50% no-repeat;
+    background: url(../images/ss.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -8007,7 +8051,7 @@
   .header__main__item .header_bot .star {
     width: 30px;
     height: 30px;
-    background: url(images/star.svg) 50% 50% no-repeat;
+    background: url(../images/star.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -8036,10 +8080,11 @@
       margin-top: 20px;
     }
     .cont_svg{
-      width: 80%;
-      height: 70%;
-      background: url(images/English_logo_header.svg) 50% 50% no-repeat;
+      width: 100%;
+      height: 100%;
+      background: url(../images/star-logo.png) 50% 50% no-repeat;
       background-size: contain;
+      mix-blend-mode: multiply;
     }
   }
   
@@ -8931,7 +8976,7 @@
     position: absolute;
     width: 45px;
     height: 25px;
-    background: url(images/arrow_img_h.svg);
+    background: url(../images/arrow_img_h.svg);
     background-size: contain;
     z-index: 2;
     transition: 0.6s ease-in-out;
@@ -8945,7 +8990,7 @@
   }
   
   .courses__main .courses_img_sl .courses_img_sl_track .courses_img_sl_block .courses_img_sl_arrow .courses_arrow.arrow_2 {
-    background: url(images/arrow_img.svg);
+    background: url(../images/arrow_img.svg);
     background-size: contain;
     left: calc(100% - 85px);
     bottom: 0;
@@ -9172,7 +9217,7 @@
     position: absolute;
     width: 45px;
     height: 25px;
-    background: url(images/arrow_img.svg);
+    background: url(../images/arrow_img.svg);
     z-index: 2;
     transition: 0.6s ease-in-out;
   }
@@ -9459,32 +9504,32 @@
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_1 {
-    background: url(images/ic_1.svg) 0 0 no-repeat;
+    background: url(../images/ic_1.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_2 {
-    background: url(images/ic_2.svg) 0 0 no-repeat;
+    background: url(../images/ic_2.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_3 {
-    background: url(images/ic_3.svg) 0 0 no-repeat;
+    background: url(../images/ic_3.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_4 {
-    background: url(images/ic_4.svg) 0 0 no-repeat;
+    background: url(../images/ic_4.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_5 {
-    background: url(images/ic_5.svg) 0 0 no-repeat;
+    background: url(../images/ic_5.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
   .benefits__main .benefits_text .benefits_text_block .benefits_ic.ic_6 {
-    background: url(images/ic_6.svg) 0 0 no-repeat;
+    background: url(../images/ic_6.svg) 0 0 no-repeat;
     background-size: contain;
   }
   
@@ -9657,7 +9702,7 @@
     row-gap: 30px;
   }
   
-  .school__main .school_text .school_text_p * {
+  .school__main .school_text .school_text_p *:not(h3, strong) {
     font-family: 'Geometria';
     font-weight: 400;
     color: #181818;
@@ -9993,87 +10038,87 @@
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_1 {
-    background: url(images/ic_info_1.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_1.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_2 {
-    background: url(images/ic_info_2.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_2.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_3 {
-    background: url(images/ic_info_3.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_3.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_4 {
-    background: url(images/ic_info_4.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_4.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_5 {
-    background: url(images/ic_info_5.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_5.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_6 {
-    background: url(images/ic_info_6.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_6.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_7 {
-    background: url(images/ic_info_7.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_7.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_8 {
-    background: url(images/ic_info_8.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_8.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_9 {
-    background: url(images/ic_info_9.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_9.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_10 {
-    background: url(images/ic_info_10.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_10.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_11 {
-    background: url(images/ic_info_11.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_11.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_12 {
-    background: url(images/ic_info_12.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_12.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_13 {
-    background: url(images/ic_info_13.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_13.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_14 {
-    background: url(images/ic_info_14.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_14.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_15 {
-    background: url(images/ic_info_15.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_15.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_16 {
-    background: url(images/ic_info_16.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_16.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .ic_info__main .ic_info_block .ic_info_block_ic.ic_17 {
-    background: url(images/ic_info_17.svg) 50% 50% no-repeat;
+    background: url(../images/ic_info_17.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -10435,7 +10480,7 @@
     position: absolute;
     width: 45px;
     height: 25px;
-    background: url(images/arrow_img_h.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img_h.svg) 50% 50% no-repeat;
     background-size: contain;
     z-index: 2;
     transition: 0.6s ease-in-out;
@@ -10447,7 +10492,7 @@
   }
   
   .all_courses__main .all_courses_block .all_courses_block_cont .courses_arrow_block .courses_arrow.arrow_2 {
-    background: url(images/arrow_img.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img.svg) 50% 50% no-repeat;
     background-size: contain;
     left: 0;
     bottom: 0;
@@ -10476,7 +10521,8 @@
   .acord {
     position: relative;
     background-color: #fefefe;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 80px 0;
+    margin-bottom: 60px;
   }
   
   .acord.no_bg {
@@ -10552,7 +10598,7 @@
   }
   
   .acord__main .accordion .accordion-item h3 .accordion-button:after {
-    background: url(images/acord_arr.svg) 50% 50% no-repeat;
+    background: url(../images/acord_arr.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -10581,7 +10627,7 @@
   }
   
   .acord__main .accordion .accordion-item .accordion-body {
-    padding: 20px 0;
+    padding: 20px 0 60px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -10640,7 +10686,7 @@
     content: '';
     width: 70px;
     height: 20px;
-    background: url(images/tab_arrow.svg) no-repeat;
+    background: url(../images/tab_arrow.svg) no-repeat;
     background-position: 0 0;
     background-size: contain;
     position: absolute;
@@ -10831,17 +10877,17 @@
   }
   
   .argument__main__item .argument_block .argument_block_ic.ic_1 {
-    background: url(images/argument_1.svg) 50% 50% no-repeat;
+    background: url(../images/argument_1.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .argument__main__item .argument_block .argument_block_ic.ic_2 {
-    background: url(images/argument_2.svg) 50% 50% no-repeat;
+    background: url(../images/argument_2.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .argument__main__item .argument_block .argument_block_ic.ic_3 {
-    background: url(images/argument_3.svg) 50% 50% no-repeat;
+    background: url(../images/argument_3.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -12023,7 +12069,7 @@
     content: '';
     width: 70px;
     height: 20px;
-    background: url(images/tab_arrow.svg) no-repeat;
+    background: url(../images/tab_arrow.svg) no-repeat;
     background-position: 0 0;
     background-size: contain;
     position: absolute;
@@ -12430,7 +12476,7 @@
     content: '';
     width: 70px;
     height: 20px;
-    background: url(images/tab_arrow.svg) no-repeat;
+    background: url(../images/tab_arrow.svg) no-repeat;
     background-position: 0 0;
     background-size: contain;
     position: absolute;
@@ -13794,7 +13840,7 @@
   .double_cont .double_block .double_grup .arr_min div {
     width: 8px;
     height: 12px;
-    background: url(images/ss.svg) 50% 50% no-repeat;
+    background: url(../images/ss.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -14112,10 +14158,10 @@
   }
   
   @media only screen and (min-width: 1200px) {
-    .teachers__main .teachers_block .teachers_block_text .teachers_cont p {
+    /* .teachers__main .teachers_block .teachers_block_text .teachers_cont p {
       font-size: 20px;
       line-height: 21px;
-    }
+    } */
   }
   
   .teachers__main .teachers_block .teachers_block_text .courses_arrow_block {
@@ -14131,7 +14177,7 @@
     position: absolute;
     width: 45px;
     height: 25px;
-    background: url(images/arrow_img_h.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img_h.svg) 50% 50% no-repeat;
     background-size: contain;
     z-index: 2;
     transition: 0.6s ease-in-out;
@@ -14143,7 +14189,7 @@
   }
   
   .teachers__main .teachers_block .teachers_block_text .courses_arrow_block .courses_arrow.arrow_2 {
-    background: url(images/arrow_img_s.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img_s.svg) 50% 50% no-repeat;
     background-size: contain;
     left: 0;
     bottom: 0;
@@ -14342,30 +14388,30 @@
   }
   
   .teacher__main .teacher_cont .teacher_block .teacher_flex .ic.ic_1 {
-    background: url(images/teacher_ic_1.svg) 50% 0 no-repeat;
+    background: url(../images/teacher_ic_1.svg) 50% 0 no-repeat;
     background-size: contain;
   }
   
   .teacher__main .teacher_cont .teacher_block .teacher_flex .ic.ic_2 {
-    background: url(images/teacher_ic_2.svg) 50% 0 no-repeat;
+    background: url(../images/teacher_ic_2.svg) 50% 0 no-repeat;
     background-size: contain;
     animation-delay: 0.1s;
   }
   
   .teacher__main .teacher_cont .teacher_block .teacher_flex .ic.ic_3 {
-    background: url(images/teacher_ic_3.svg) 50% 0 no-repeat;
+    background: url(../images/teacher_ic_3.svg) 50% 0 no-repeat;
     background-size: contain;
     animation-delay: 0.2s;
   }
   
   .teacher__main .teacher_cont .teacher_block .teacher_flex .ic.ic_4 {
-    background: url(images/teacher_ic_4.svg) 50% 0 no-repeat;
+    background: url(../images/teacher_ic_4.svg) 50% 0 no-repeat;
     background-size: contain;
     animation-delay: 0.3s;
   }
   
   .teacher__main .teacher_cont .teacher_block .teacher_flex .ic.ic_5 {
-    background: url(images/teacher_ic_5.svg) 50% 0 no-repeat;
+    background: url(../images/teacher_ic_5.svg) 50% 0 no-repeat;
     background-size: contain;
     animation-delay: 0.4s;
   }
@@ -14925,7 +14971,7 @@
     overflow: hidden;
     z-index: 2;
     transition: 0.4s ease-in-out;
-    background: url(images/arrow_img_h.svg) 50% 50% no-repeat;
+    background: url(../images/arrow_img_h.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -15275,7 +15321,7 @@
   .topic__main .topic_video .video .play div {
     width: 22px;
     height: 22px;
-    background: url(images/play.svg) 50% 50% no-repeat;
+    background: url(../images/play.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -15474,17 +15520,17 @@
   }
   
   .contacts .contacts__main .contacts_cont .contacts_cont_flex .left .ic.ic_1 {
-    background: url(images/phone_menu.svg) 50% 50% no-repeat;
+    background: url(../images/phone_menu.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .contacts .contacts__main .contacts_cont .contacts_cont_flex .left .ic.ic_2 {
-    background: url(images/mail.svg) 50% 50% no-repeat;
+    background: url(../images/mail.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
   .contacts .contacts__main .contacts_cont .contacts_cont_flex .left .ic.ic_3 {
-    background: url(images/point_menu.svg) 50% 50% no-repeat;
+    background: url(../images/point_menu.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -15575,7 +15621,8 @@
   }
   
   .footer {
-    background: linear-gradient(180deg, #13375b 23.96%, #0e2740 100%);
+    /* background: linear-gradient(180deg, #13375b 23.96%, #0e2740 100%); */
+    background: linear-gradient(180deg, #217177 23.96%, #217177 100%);
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -15797,7 +15844,7 @@
   .footer__main .footer_sec .footer_block .shit {
     width: 203px;
     height: 72px;
-    /* background: url(images/shit_white.svg) 50% 50% no-repeat; */
+    /* background: url(../images/shit_white.svg) 50% 50% no-repeat; */
     background-size: contain;
     margin-top: 60px;
     background-color: #fff;
@@ -15807,14 +15854,14 @@
   .footer__main .footer_sec .footer_block .shit::after{
     content: '';
     display: block;
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     position: absolute;
 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(images/English_logo_footer.svg) 50% 50% no-repeat;
+    background: url(../images/star-logo.png) 50% 50% no-repeat;
     background-size: contain;
     z-index: 5;
   }
@@ -15861,7 +15908,7 @@
     display: block;
     width: 107px;
     height: 111px;
-    background: url(images/lofo_f.svg) 50% 50% no-repeat;
+    background: url(../images/ScoopLabs.jpg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -15876,7 +15923,7 @@
   .footer__item .logo_push-k .logo {
     width: 91px;
     height: 29px;
-    background: url(images/logo_push-k.svg) 50% 50% no-repeat;
+    background: url(../images/logo_push-k.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -16081,7 +16128,7 @@
   }
   
   .reviews_img.none {
-    background: url(images/reviews_none.png) 50% 50% no-repeat;
+    background: url(../images/reviews_none.png) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -16142,7 +16189,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: url(images/google_m.svg) 50% 50% no-repeat;
+    background: url(../images/google_m.svg) 50% 50% no-repeat;
     background-size: contain;
   }
   
@@ -16417,7 +16464,7 @@
     width: 32px;
     height: 32px;
     margin-right: 15px;
-    background: url(images/bolshe.svg) 50% 50% no-repeat;
+    background: url(../images/bolshe.svg) 50% 50% no-repeat;
     background-size: contain;
     transform: rotate(0);
     transition: .3s ease-out;
