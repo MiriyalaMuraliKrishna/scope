@@ -3294,12 +3294,20 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     transition: 0.3s ease-out;
   }
   
-  @media only screen and (min-width: 1200px) {
-    .soc .a_soc.soc_fb:hover span {
+  @media only screen and (min-width: 0px) {
+    .soc .a_soc.soc_fb:hover span,
+    .soc .a_soc.soc_linkedin:hover span,
+    .soc .a_soc.soc_instagram:hover span,
+    .soc .a_soc.soc_youtube:hover span
+    {
       margin-bottom: 5px;
     }
   
-    .soc .a_soc.soc_fb:hover span:before {
+    .soc .a_soc.soc_fb:hover span:before ,
+    .soc .a_soc.soc_linkedin:hover span:before ,
+    .soc .a_soc.soc_instagram:hover span:before ,
+    .soc .a_soc.soc_youtube:hover span:before 
+    {
       bottom: -25px;
       filter: blur(3px);
       opacity: 1;
@@ -3328,6 +3336,70 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     transition: 0.3s ease-out;
   }
   
+  .soc .a_soc.soc_linkedin span {
+    background: url(../images/soc_linkedin.gif) 50% 50% no-repeat;
+    background-size: contain;
+  }
+  
+  .soc .a_soc.soc_linkedin span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: url(../images/soc_linkedin.gif) 50% 50% no-repeat;
+    background-size: contain;
+    transform: rotate3d(1, 0, 0, 100deg);
+    filter: blur(3px);
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  
+  .soc .a_soc.soc_instagram span {
+    background: url(../images/soc_instagram.png) 50% 50% no-repeat;
+    background-size: contain;
+  }
+  
+  .soc .a_soc.soc_instagram span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: url(../images/soc_instagram.png) 50% 50% no-repeat;
+    background-size: contain;
+    transform: rotate3d(1, 0, 0, 100deg);
+    filter: blur(3px);
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+
+  .soc .a_soc.soc_youtube span {
+    background: url(../images/soc_youtube.png) 50% 50% no-repeat;
+    background-size: contain;
+  }
+  
+  .soc .a_soc.soc_youtube span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: url(../images/soc_youtube.png) 50% 50% no-repeat;
+    background-size: contain;
+    transform: rotate3d(1, 0, 0, 100deg);
+    filter: blur(3px);
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+
+
   @media only screen and (min-width: 1200px) {
     .soc .a_soc.soc_vb:hover span {
       margin-bottom: 5px;
@@ -5992,12 +6064,46 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     transition: 0.3s ease-out;
   }
   
+  .flex_ic a.linkedin {
+    background: url(../images/linkedin.png) 50% 50% no-repeat;
+    background-size: contain;
+    margin-bottom: 0;
+    transition: 0.3s ease-out;
+  }
+  
+  .flex_ic a.linkedin:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: url(../images/linkedin.png) 50% 50% no-repeat;
+    background-size: contain;
+    transform: rotate3d(1, 0, 0, 100deg);
+    filter: blur(3px);
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  
+
   @media only screen and (min-width: 1200px) {
     .flex_ic a.telegram:hover {
       margin-bottom: 5px;
     }
   
     .flex_ic a.telegram:hover:before {
+      bottom: -25px;
+      filter: blur(3px);
+      opacity: 1;
+      transform: rotate3d(1, 0, 0, 120deg);
+    }
+    .flex_ic a.linkedin:hover {
+      margin-bottom: 5px;
+    }
+  
+    .flex_ic a.linkedin:hover:before {
       bottom: -25px;
       filter: blur(3px);
       opacity: 1;
