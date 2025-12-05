@@ -8049,13 +8049,23 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     visibility: visible;
     filter: blur(0px);
   }
-  
-  .header__main__item .header_sl .header_sl_cont .header_sl_block h2 {
+    .header__main__item .header_sl .header_sl_cont .header_sl_block h2 {
     width: 100%;
     font-family: 'Geometria';
     font-weight: 400;
     margin: 0 0 20px 0;
     color: #181818;
+  }
+  
+  
+  span.option-text{
+    width: 100%;
+    font-family: 'Geometria';
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: #181818;
+    display: block;
+    margin-bottom: 16px;
   }
   
   @media only screen and (min-width: 320px) {
@@ -13710,6 +13720,9 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+  }
+  .double_cont .double_block .mask_img.pos-right img{
+    object-position: center right;
   }
   
   @media only screen and (min-width: 1200px) {
