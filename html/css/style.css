@@ -3788,7 +3788,7 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     list-style-type: none;
   }
   
-  .h2_anime {
+  .h2_anime{
     font-family: 'Geometria';
     font-weight: 500;
     color: #217177;
@@ -3801,10 +3801,22 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     transition: 1s ease-out;
   }
   
+  .h3_anime{
+    font-family: 'Geometria';
+    font-weight: 500;
+    color: #217177;
+    position: relative;
+    display: table;
+    margin: 0 0 16px;
+  }
   @media only screen and (min-width: 320px) {
     .h2_anime {
       font-size: 24px;
       line-height: 30px;
+    }
+    .h3_anime{
+      font-size: 20px;
+      line-height: 24px;
     }
   }
   
@@ -3813,12 +3825,17 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
       font-size: 50px;
       line-height: 62px;
     }
+    .h3_anime{
+      font-size: 30px;
+      line-height: 38px;
+    }
   }
   
   .h2_anime.scrolled {
     animation: h2_anime 1s ease-in-out;
     animation-fill-mode: forwards;
   }
+
   
   @keyframes h2_anime {
     0% {
@@ -8667,7 +8684,7 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   
   .courses__main .courses_text h2,
   .courses__main .exams_text h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   
   .courses__main .courses_text .courses_text_cont,
