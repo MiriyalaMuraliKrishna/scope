@@ -11254,6 +11254,13 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     }
   }
   
+
+  .detal__main .detal_block .detal_block_text .detal_block_small {
+    font-family: 'Geometria';
+    font-weight: 400;
+    color: #074684;
+  }
+
   .detal__main .detal_block .detal_block_text .text {
     font-family: 'Geometria';
     font-weight: 400;
@@ -11404,8 +11411,8 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   .detal__main .detal_block .detal_absolut.detal_1 {
     font-family: 'Geometria';
     font-weight: 700;
-    font-size: 179px;
-    line-height: 180px;
+    font-size: 150px;
+    line-height: 150px;
     background: linear-gradient(187.56deg, #5252d2 -35.31%, #ff6c4b 94.14%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -11425,7 +11432,7 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     .detal__main .detal_block .detal_absolut.detal_1 {
       right: auto;
       left: 44px;
-      bottom: 30px;
+      bottom: 0;
     }
   }
   
@@ -11657,9 +11664,9 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   }
   
   @media only screen and (min-width: 768px) {
-    .tab__main .tab_top {
+    /* .tab__main .tab_top {
       justify-content: space-between;
-    }
+    } */
   }
   
   @media only screen and (min-width: 1200px) {
@@ -12103,7 +12110,8 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     align-items: center;
     width: 100%;
   }
-  
+  .tab__main .tab_main .tab_cont .tab_cont_text ul{margin-left: 16px;}
+
   .tab__main .tab_main .tab_cont .tab_cont_text_img .tab_cont_text_text {
     position: relative;
   }
