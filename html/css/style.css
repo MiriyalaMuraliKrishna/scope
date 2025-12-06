@@ -7433,6 +7433,11 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   }
   
   @media only screen and (min-width: 1200px) {
+    .ic_info__title h2{
+      font-size: 35px;
+      line-height: 38px;
+      margin-bottom: 30px;
+    }
     .header__main__item h1 {
       font-size: 35px;
       line-height: 38px;
@@ -10121,6 +10126,9 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   }
   
   @media only screen and (min-width: 320px) {
+    .ic_info__title{
+      margin-bottom: 50px;
+    }
     .ic_info__main .ic_info_block {
       width: 100%;
       display: flex;
