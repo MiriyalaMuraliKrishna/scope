@@ -10722,7 +10722,7 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     padding: 30px 0;
     color: #217177;
     font-family: 'Geometria';
-    font-weight: 300;
+    font-weight: 400;
     transition: 0.3s ease-out;
   }
   
@@ -10742,8 +10742,8 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   
   @media only screen and (min-width: 1200px) {
     .acord__main .accordion .accordion-item h3 .accordion-button {
-      font-size: 40px;
-      line-height: 50px;
+      font-size: 34px;
+      line-height: 38px;
     }
   }
   
@@ -15952,10 +15952,19 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
     width: 100%;
   }
   
+  .footer__main .footer_sec ul li,
   .footer__main .footer_sec ul li .a_hover {
     color: #fff;
     font-family: 'Geometria';
     font-weight: 300;
+  }
+  .footer__main .footer_sec ul li strong{
+    font-weight: 700;
+    display: block;
+  }
+  .footer__main .footer_sec ul li p{
+    font-size: 16px;
+    line-height: 24px;
   }
   
   @media only screen and (min-width: 320px) {
@@ -15966,6 +15975,10 @@ span.awards-value{margin: 0; font-weight: 900; color: #217177; font-size: 30px; 
   }
   
   @media only screen and (min-width: 1200px) {
+  .footer__main .footer_sec ul li{
+    font-size: 16px;
+    line-height: 24px;
+  }
     .footer__main .footer_sec ul li .a_hover {
       font-size: 18px;
       line-height: 24px;
